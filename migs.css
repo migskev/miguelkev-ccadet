@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+:root {
+  --navy: #0a2540;
+  --teal: #2dd4bf;
+  --gray: #f1f5f9;
+  --dark-gray: #475569;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--gray);
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
+nav {
+  background-color: var(--navy);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: var(--teal);
+}
+
+header {
+  background: linear-gradient(135deg, #0a2540, #083344);
+  color: var(--white);
+  text-align: center;
+  padding: 70px 20px;
+}
+
+header h1 {
+  font-size: 2.6rem;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: var(--teal);
+}
+
+section {
+  padding: 55px 15%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: var(--navy);
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--teal);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+#about img {
+  display: block;
+  margin: 25px auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--teal);
+}
+
+.card,
+.box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 5px solid var(--teal);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  background: #e6fffa;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--teal);
+}
+
+#projects img {
+  width: 100%;
+  max-width: 280px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--teal);
+}
+
+#contact p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+footer {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 8%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
